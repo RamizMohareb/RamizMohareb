@@ -1,0 +1,238 @@
+{
+  "Uuid": "60e1639b-1726-4dda-a3f1-51b0e23aecbc",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "SimpleBeam_Hinge_Roller_Rectangular",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.CodeBlockNodeModel, CoreNodeModels",
+      "NodeType": "CodeBlockNode",
+      "Code": "L = 6000;\t// beam span, mm\nb = 300;\t// rectangular section width, mm\nh = 500;\t// rectangular section height, mm\nptA = Point.ByCoordinates(0, 0, 0);\nptB = Point.ByCoordinates(L, 0, 0);\nbeamLine = Line.ByStartPointEndPoint(ptA, ptB);\nSupports = {\"Hinge\", \"Roller\"};\t// support @ ptA, support @ ptB",
+      "Id": "4be3ec92-22a7-47cc-9c85-b26e7422a5f3",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "77ba5f65-dbe2-48ae-9e22-f8d19403df85",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d15e112d-14a4-4f78-a7bf-5b2402cb3b30",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "781313ce-b67c-4a62-8c03-b30e0591e649",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "35d37404-54bd-46cb-a5c3-af4b3d1605fe",
+          "Name": "",
+          "Description": "Value of expression at line 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "91d9fb88-e8f0-4e04-be94-8f83e45112a0",
+          "Name": "",
+          "Description": "Value of expression at line 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4ddc9cca-15c4-4830-9bd5-f9de6d6f3441",
+          "Name": "",
+          "Description": "Value of expression at line 6",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3f9e933e-fb84-4dba-be25-3b98b33f9f3f",
+          "Name": "",
+          "Description": "Value of expression at line 7",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "626301f6-3265-4da2-8465-c71414897b1e",
+      "Inputs": [
+        {
+          "Id": "d15ff766-776c-42cd-841d-5ea5c880fc59",
+          "Name": "",
+          "Description": "Node input to watch",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4f94299a-e992-4fb7-82c1-f021c000fe3f",
+          "Name": "",
+          "Description": "Watch contents",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "a6646301-f7ce-4ed3-977b-6ef7052f0510",
+      "Inputs": [
+        {
+          "Id": "82bd27e7-0c62-41e9-8950-ceba65cf5c7c",
+          "Name": "",
+          "Description": "Node input to watch",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2eb3bbcb-7e95-4023-af95-33f37a4aeeee",
+          "Name": "",
+          "Description": "Watch contents",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "4ddc9cca-15c4-4830-9bd5-f9de6d6f3441",
+      "End": "d15ff766-776c-42cd-841d-5ea5c880fc59",
+      "Id": "75e68d65-afc6-4490-a684-617986b86000",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3f9e933e-fb84-4dba-be25-3b98b33f9f3f",
+      "End": "82bd27e7-0c62-41e9-8950-ceba65cf5c7c",
+      "Id": "c79bd23d-a53c-4a98-aa09-89ff36e1fdd6",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.19.0.5892",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "4be3ec92-22a7-47cc-9c85-b26e7422a5f3",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 100.0,
+        "Y": 150.0
+      },
+      {
+        "Id": "626301f6-3265-4da2-8465-c71414897b1e",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 500.0,
+        "Y": 100.0
+      },
+      {
+        "Id": "a6646301-f7ce-4ed3-977b-6ef7052f0510",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 500.0,
+        "Y": 300.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}
