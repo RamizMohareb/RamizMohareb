@@ -96,13 +96,21 @@ namespace Sofistik
                     stations.Add(L * i / Steps);
                 }
 
-                // Station where the shear of the uniform load alone changes sign.
+                // Stations where the shear crosses zero: left of the point load
+                // (ra / w) and right of it ((ra - P) / w). Without the point
+                // load both are the same station.
                 if (w > 0.0)
                 {
                     double xv = ra / w;
                     if (xv > 0.0 && xv < L)
                     {
                         stations.Add(xv);
+                    }
+
+                    double xvRight = (ra - pointLoad) / w;
+                    if (xvRight > 0.0 && xvRight < L)
+                    {
+                        stations.Add(xvRight);
                     }
                 }
 
